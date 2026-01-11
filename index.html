@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang web lớp 12A7</title>
     <style>
-        /* FADE IN */
-        @keyframes fadeIn {
+        /* Animation slide-up cho toàn bộ trang web */
+        @keyframes slide-up {
             from {
+                transform: translateY(50px);
                 opacity: 0;
-                transform: translateY(20px);
             }
             to {
-                opacity: 1;
                 transform: translateY(0);
+                opacity: 1;
             }
+        }
+
+        body {
+            animation: slide-up 1s ease-out forwards;
+            opacity: 0; /* Đảm bảo ẩn trước khi hiệu ứng bắt đầu */
+        }
+
+        /* Loại bỏ các hiệu ứng cũ */
+        header, nav, .hero, .container, footer {
+            animation: none;
+            opacity: 1;
         }
 
         body {
@@ -26,31 +37,6 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
-
-        header, nav, .hero, .container, footer {
-            animation: fadeIn 1s ease forwards;
-            opacity: 0; /* Đảm bảo ẩn trước khi hiệu ứng bắt đầu */
-        }
-
-        header {
-            animation-delay: 0.2s;
-        }
-
-        nav {
-            animation-delay: 0.4s;
-        }
-
-        .hero {
-            animation-delay: 0.6s;
-        }
-
-        .container {
-            animation-delay: 0.8s;
-        }
-
-        footer {
-            animation-delay: 1s;
         }
 
         header {
@@ -161,45 +147,15 @@
             color: white;
         }
 
-        /* Animation slide-up */
-        @keyframes slide-up {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .animate {
-            animation: slide-up 0.8s ease-out forwards;
-        }
-
-        .delay-1 {
-            animation-delay: 0.3s;
-        }
-        .delay-2 {
-            animation-delay: 0.6s;
-        }
-        .delay-3 {
-            animation-delay: 0.9s;
-        }
-        .delay-4 {
-            animation-delay: 1.2s;
-        }
-        footer {
-            background-color: #163a9f;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
+        /* Đảm bảo chữ luôn rõ ràng */
+        h1, h2, p, a {
+            color: inherit;
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header>  
         <h1>Trang web lớp 12A7</h1>
     </header>
     <nav>
@@ -208,11 +164,11 @@
         <a href="#leaders">Giáo viên chủ nhiệm</a>
         <a href="#links">Liên kết tổ</a>
     </nav>
-    <div class="hero animate delay-1" id="home">
+    <div class="hero" id="home">
         <h2>Chào mừng đến với lớp 12A7</h2>
         <p>Nhiệt huyết, sáng tạo và đoàn kết.</p>
     </div>
-    <div class="container animate delay-2" id="about">
+    <div class="container" id="about">
         <h2 class="section-title">Giới thiệu</h2>
         <p>
     <strong>Lớp 12A7 – K26 – THPT Lê Văn Thiêm</strong> với 46 thành viên,
@@ -220,7 +176,7 @@
     để viết nên những kỷ niệm đẹp nhất của tuổi học trò.
 </p>
     </div>
-    <div class="container animate delay-3" id="leaders">
+    <div class="container" id="leaders">
          
         <h2 class="section-title">Giáo viên chủ nhiệm</h2>
         <div class="leaders">
@@ -234,7 +190,7 @@
         
         </div>
     </div>
-    <div class="container animate delay-4" id="links">
+    <div class="container" id="links">
         <h2 class="section-title">Liên kết tổ</h2>
         <p style="text-align: center; font-size: 1.05rem; color: #444;">
     Dưới đây là các website đại diện cho <strong>4 tổ học tập</strong> của lớp 12A7:
