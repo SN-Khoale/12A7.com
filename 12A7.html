@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web lớp 12A7</title>
+    <style>
+        /* FADE IN */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header, nav, .hero, .container, footer {
+            animation: fadeIn 1s ease forwards;
+            opacity: 0; /* Đảm bảo ẩn trước khi hiệu ứng bắt đầu */
+        }
+
+        header {
+            animation-delay: 0.2s;
+        }
+
+        nav {
+            animation-delay: 0.4s;
+        }
+
+        .hero {
+            animation-delay: 0.6s;
+        }
+
+        .container {
+            animation-delay: 0.8s;
+        }
+
+        footer {
+            animation-delay: 1s;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            width: 100%; /* Kéo dài thanh màu xanh hết màn hình */
+            background-color: #1f4fd8;
+            display: flex;
+            justify-content: center;
+            padding: 0.6rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        nav a:hover {
+            opacity: 1;
+        }
+        .hero {
+            background: linear-gradient(135deg, #e8eeff, #f5f7fb);
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+        .hero h2 {
+            color: #1f4fd8;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+        .leaders {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .leader-card {
+            width: 220px;
+            padding: 1.2rem;
+            background-color: #87CEEB;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-card img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+             margin: 0 auto 0.6rem;
+            display: block;
+            border: 3px solid white;
+            
+        }
+        .leader-card:hover {
+            background-color: #4682B4;
+            cursor: pointer;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .link-card {
+            width: 250px;
+            padding: 1rem;
+            background-color: #FFD700;
+            border-radius: 8px;
+            text-align: center;
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .link-card:hover {
+            background-color: #FFA500;
+            color: white;
+        }
+
+        /* Animation slide-up */
+        @keyframes slide-up {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate {
+            animation: slide-up 0.8s ease-out forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.3s;
+        }
+        .delay-2 {
+            animation-delay: 0.6s;
+        }
+        .delay-3 {
+            animation-delay: 0.9s;
+        }
+        .delay-4 {
+            animation-delay: 1.2s;
+        }
+        footer {
+            background-color: #163a9f;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trang web lớp 12A7</h1>
+    </header>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#leaders">Giáo viên chủ nhiệm</a>
+        <a href="#links">Liên kết tổ</a>
+    </nav>
+    <div class="hero animate delay-1" id="home">
+        <h2>Chào mừng đến với lớp 12A7</h2>
+        <p>Nhiệt huyết, sáng tạo và đoàn kết.</p>
+    </div>
+    <div class="container animate delay-2" id="about">
+        <h2 class="section-title">Giới thiệu</h2>
+        <p>
+    <strong>Lớp 12A7 – K26 – THPT Lê Văn Thiêm</strong> với 46 thành viên,
+    luôn dám là chính mình, sống đúng đam mê và không ngừng nỗ lực
+    để viết nên những kỷ niệm đẹp nhất của tuổi học trò.
+</p>
+    </div>
+    <div class="container animate delay-3" id="leaders">
+         
+        <h2 class="section-title">Giáo viên chủ nhiệm</h2>
+        <div class="leaders">
+            <div class="leader-card">
+    <img src="gvcn.jpg" alt="Giáo viên chủ nhiệm">
+    <strong>Văn Ngọc Ánh</strong>
+    <span>Giáo viên chủ nhiệm</span>
+</div>
+
+            
+        
+        </div>
+    </div>
+    <div class="container animate delay-4" id="links">
+        <h2 class="section-title">Liên kết tổ</h2>
+        <p style="text-align: center; font-size: 1.05rem; color: #444;">
+    Dưới đây là các website đại diện cho <strong>4 tổ học tập</strong> của lớp 12A7:
+    
+
+        <div class="links">
+            <a href="https://example.com/to1" class="link-card">Tổ 1</a>
+            <a href="https://example.com/to2" class="link-card">Tổ 2</a>
+            <a href="https://example.com/to3" class="link-card">Tổ 3</a>
+            <a href="https://example.com/to4" class="link-card">Tổ 4</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("header, nav, .hero, .container, footer");
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+                section.style.opacity = "1"; // Đảm bảo hiển thị sau khi hiệu ứng chạy
+            });
+        });
+    </script>
+</body>
+</html>
